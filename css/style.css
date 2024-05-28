@@ -1,0 +1,557 @@
+* {
+    box-sizing: border-box;
+}
+
+body * {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Open Sans", "PF DinText Pro", Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header * {
+    color: rgb(255, 255, 255);
+    font-family: "Open Sans", "PF DinText Pro", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 151, 119);
+
+    #nav-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+
+
+        #left-nav {
+            display: flex;
+            height: 32px;
+            width: 50vw;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+
+            :nth-child(2) {
+                /*width: 94px;*/
+                align-self: center;
+                font-weight: 800;
+                cursor: pointer;
+            }
+
+            :last-child {
+                align-self: center;
+                display: flex;
+                cursor: pointer;
+
+                a {
+                    width: 54px;
+                    height: 30px;
+                    padding: 8px 12px;
+                    border: 1px solid dimgray;
+                    border-radius: 1px;
+                }
+
+                :first-child {
+                    border-bottom-left-radius: 5px;
+                    border-top-left-radius: 5px;
+                    cursor: pointer;
+                }
+
+                :last-child {
+                    border-bottom-right-radius: 5px;
+                    border-top-right-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        #right-nav {
+            display: flex;
+            height: 32px;
+            width: 50vw;
+            align-self: center;
+            justify-content: center;
+            gap: 24px;
+
+
+            #post-ad {
+                margin-left: 12px;
+                padding: 14px;
+                background-color: rgb(255, 200, 0);
+                color: rgb(103, 53, 0);
+                align-self: center;
+                font-weight: 800;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            #login-box-wrapper {
+                cursor: pointer;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #chat-box-wrapper {
+                cursor: pointer;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+    }
+
+    #main-logo a {
+        width: 104px;
+        height: 22px;
+        cursor: pointer;
+
+        /*img {*/
+        /*    width: 104px;*/
+        /*    height: 29px;*/
+        /*}*/
+    }
+
+    #chat-box-wrapper svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    #login-box-wrapper svg {
+        width: 32px;
+        height: 22px;
+
+
+    }
+
+    #header-search {
+        height: 186px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px 4px 8px;
+            margin-bottom: 16px;
+            border-radius: 30px;
+            width: fit-content;
+            background-color: rgb(16, 132, 111);
+            position: relative;
+            left: 40%;
+            cursor: pointer;
+        }
+
+        form {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 30px;
+            background-color: white;
+
+            input {
+                width: 737px;
+                height: 58px;
+                outline: none;
+                border: none;
+                color: rgb(110, 106, 106);
+                line-height: 22px;
+                cursor: auto;
+                font-size: 16px;
+                padding: 18px 24px;
+                border-radius: 30px;
+
+            }
+
+            button {
+                border-radius: 100%;
+                background-color: rgb(255, 200, 0);
+                border: none;
+                cursor: pointer;
+                width: 50px;
+                height: 50px;
+                padding: 13px;
+
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 90px;
+
+    #own {
+        height: 100px;
+        width: 970px;
+        border: 1px solid red;
+        padding: 30px 2px;
+        color: #0074ba;
+    }
+
+    #title {
+        font-weight: 800;
+        font-size: 14px;
+        color: rgb(47, 52, 50);
+        line-height: 24px;
+    }
+
+    #items-selection {
+        display: grid;
+        grid-template-areas:
+        "electronics property vehicles home-garden"
+        "services business hobby jobs"
+        "animals fashion education other"
+        "essentials agri overseas  ";
+        grid-template-columns:247px 247px 247px 247px;
+        grid-template-rows:  108px 108px 108px 108px;
+        align-items: center;
+        color: rgb(47, 52, 50);
+        font-size: 16px;
+        font-weight: 400;
+        justify-content: space-between;
+
+        .item {
+            padding: 24px 0 24px 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            align-self: center;
+            background-size: contain;
+        }
+
+        .detail {
+            display: flex;
+            flex-direction: column;
+            line-height: 27.5px;
+            margin-left: 5px;
+
+            :first-child {
+                font-size: 16px;
+                text-decoration: none;
+                color: rgb(47, 52, 50);
+            !important;
+            }
+
+            :last-child {
+                line-height: 20.6px;
+                color: rgb(112, 118, 118);
+            }
+        }
+    }
+
+    #jobs svg,
+    #essential svg,
+    #overseas svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    #item-links {
+
+        display: grid;
+        grid-template-areas:
+            "making-money  making-money  ikman-job  ikman-job"
+            "links links links links"
+            "ads-electronics ads-property ads-job ads-vehicle"
+            "paragraph paragraph paragraph paragraph";
+
+        grid-template-columns:247px 247px 247px 247px;
+        grid-template-rows: 198px 24px 152px 756px;
+        justify-content: center;
+
+
+        #making-money {
+            grid-area: making-money;
+        }
+
+        #ikman-job {
+            grid-area: ikman-job;
+        }
+
+        #links {
+            grid-area: links;
+        }
+
+        #ads-electronics {
+            grid-area: ads-electronics;
+        }
+
+        #ads-property {
+            grid-area: ads-property;
+        }
+
+        #ads-job {
+            grid-area: ads-job;
+        }
+
+        #ads-vehicle {
+            grid-area: ads-vehicle;
+        }
+
+        #paragraph {
+            grid-area: paragraph;
+        }
+
+        .cell {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        #making-money {
+            padding: 32px 32px 36px 32px;
+            border-right-color: rgb(0, 0, 0);
+            border-right: 0.5px solid #d5d3d3;
+            border-bottom: 0.5px solid #d5d3d3;
+            border-top: 0.5px solid #d5d3d3;
+            border-left: 0.5px solid #d5d3d3;
+            margin-top:8px;
+            margin-bottom:16px;
+
+
+            h2 {
+                color: rgb(47, 52, 50);
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 28px;
+            }
+
+
+            button {
+                background-color: rgb(255, 200, 0);
+                color: rgb(103, 53, 0);
+                border: none;
+
+                a {
+                    color: rgb(103, 53, 0);
+                    display: inline-flex;
+                    gap: 8px;
+                }
+
+            }
+        }
+
+        #context {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding-left: 32px;
+        }
+
+        .p {
+            display: flex;
+            flex-direction: column;
+            color: rgb(66, 78, 78);
+            border-color: rgb(66, 78, 78);
+            line-height: 19px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+
+        .button {
+            font-size: 14px;
+            font-weight: 800;
+            width: 200px;
+            height: 40px;
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #ikman-job {
+            padding: 32px 32px 36px 32px;
+            border-right: 0.5px solid #d5d3d3;
+            border-bottom: 0.5px solid #d5d3d3;
+            border-top: 0.5px solid #d5d3d3;
+            margin-top:8px;
+            margin-bottom:16px;
+
+            button {
+                background-color: rgb(0, 116, 186);
+                color: rgb(255, 255, 255);
+                border: 1px solid rgb(255, 255, 255);
+                a{
+                    display: inline-flex;
+                    gap: 8px;
+                }
+            }
+
+        }
+
+        #links {
+            color: rgb(47, 52, 50);
+            line-height: 24px;
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom:12px;
+        }
+
+        .short-cut {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            color: rgb(66, 78, 78);
+            cursor: pointer;
+
+        }
+
+        #ads-electronics,
+        #ads-property,
+        #ads-job,
+        #ads-vehicle {
+            padding: 12px;
+            margin-top: 12px;
+            margin-right: 16px;
+            background-color: rgb(243, 246, 245);
+
+            span {
+                font-weight: 700;
+                color: rgb(47, 52, 50);
+                margin-bottom:8px;
+            }
+            a{
+                margin-right: 4px;
+                text-align: left;
+            }
+        }
+    }
+
+    #paragraph {
+        /*margin-left: 94.3px;*/
+        /*margin-right: 94.3px;*/
+        padding: 24px 0;
+        width: 985px;
+
+
+        h2 {
+            color: rgb(112, 118, 118);
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: rgb(112, 118, 118);
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            line-height: 24px;
+
+            strong {
+                font-weight: 700;
+            }
+
+        }
+    }
+
+}
+
+
+footer {
+    background-color: rgb(243, 246, 245);
+    border-bottom: 0.1px solid rgb(221, 219, 219);
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    /*width: 985px;*/
+    width: 100%;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        width: 200px;
+
+        span {
+            line-height: 24px;
+            color: rgb(66, 78, 78);
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 32.2px;
+            text-decoration: none;
+            color: rgb(47, 52, 50);
+            cursor: pointer;
+        }
+    }
+
+    #google-play {
+        margin-bottom: 8px;
+    }
+
+    #country {
+        display: inline-flex;
+        justify-content: start;
+        text-align: center;
+
+        p {
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+
+    #con span {
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+
+    #con-div {
+        width: 24px;
+        height: 24px;
+        margin-left: 8px;
+        align-self: center;
+
+    }
+
+    #social-media {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+
+}
+
+#copy-right{
+   display: flex;
+   width:987px;
+    margin-top:18px;
+    margin-bottom:18px;
+
+:first-child{
+    width: 687px;
+}
+   :last-child{
+       width: 300px;
+       text-align: end;
+   }
+
+}
