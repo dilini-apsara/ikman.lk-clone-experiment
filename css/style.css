@@ -21,6 +21,19 @@ header * {
     font-size: 14px;
 }
 
+#mobile-icon{
+    display: none;
+}
+#mobile-icon *{
+    background-color:rgb(20, 151, 119);
+    border: none;
+
+}
+#left-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -325,8 +338,8 @@ main {
             border-bottom: 0.5px solid #d5d3d3;
             border-top: 0.5px solid #d5d3d3;
             border-left: 0.5px solid #d5d3d3;
-            margin-top:8px;
-            margin-bottom:16px;
+            margin-top: 8px;
+            margin-bottom: 16px;
 
 
             h2 {
@@ -385,14 +398,15 @@ main {
             border-right: 0.5px solid #d5d3d3;
             border-bottom: 0.5px solid #d5d3d3;
             border-top: 0.5px solid #d5d3d3;
-            margin-top:8px;
-            margin-bottom:16px;
+            margin-top: 8px;
+            margin-bottom: 16px;
 
             button {
                 background-color: rgb(0, 116, 186);
                 color: rgb(255, 255, 255);
                 border: 1px solid rgb(255, 255, 255);
-                a{
+
+                a {
                     display: inline-flex;
                     gap: 8px;
                 }
@@ -405,7 +419,7 @@ main {
             line-height: 24px;
             font-size: 14px;
             font-weight: 800;
-            margin-bottom:12px;
+            margin-bottom: 12px;
         }
 
         .short-cut {
@@ -429,9 +443,10 @@ main {
             span {
                 font-weight: 700;
                 color: rgb(47, 52, 50);
-                margin-bottom:8px;
+                margin-bottom: 8px;
             }
-            a{
+
+            a {
                 margin-right: 4px;
                 text-align: left;
             }
@@ -472,86 +487,101 @@ main {
 
 footer {
     background-color: rgb(243, 246, 245);
-    border-bottom: 0.1px solid rgb(221, 219, 219);
-    display: flex;
-    justify-content: center;
-    margin-top: 12px;
-    margin-bottom: 16px;
-    /*width: 985px;*/
     width: 100%;
+    margin-bottom: 12px;
+    padding-top: 33px;
 
-    div {
+    #container1 {
+        border-bottom: 0.2px solid rgb(221, 219, 219);
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        margin-top: 12px;
         margin-bottom: 16px;
-        width: 200px;
 
-        span {
-            line-height: 24px;
-            color: rgb(66, 78, 78);
-            font-size: 16px;
-            font-weight: 800;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+            width: 200px;
+
+            span {
+                line-height: 24px;
+                color: rgb(66, 78, 78);
+                font-size: 16px;
+                font-weight: 800;
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 32.2px;
+                text-decoration: none;
+                color: rgb(47, 52, 50);
+                cursor: pointer;
+            }
         }
 
-        a {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 32.2px;
-            text-decoration: none;
-            color: rgb(47, 52, 50);
-            cursor: pointer;
+        #google-play {
+            margin-bottom: 8px;
         }
-    }
 
-    #google-play {
-        margin-bottom: 8px;
-    }
-
-    #country {
-        display: inline-flex;
-        justify-content: start;
-        text-align: center;
-
-        p {
-            line-height: 24px;
+        #country {
+            display: inline-flex;
+            justify-content: start;
             text-align: center;
+
+            p {
+                line-height: 24px;
+                text-align: center;
+            }
         }
+
+        #con span {
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        #con-div {
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+            align-self: center;
+
+        }
+
+        #social-media {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
     }
 
-    #con span {
-        margin-top: 20px;
-        margin-bottom: 8px;
+    #container2 {
+        margin-top: 18px;
+        margin-bottom: 18px;
+        display:flex;
+        justify-content: center;
+
+        #copy-right {
+            display: flex;
+            width: 987px;
+            margin-top: 18px;
+            margin-bottom: 18px;
+
+            :first-child {
+                width: 687px;
+            }
+
+            :last-child {
+                width: 300px;
+                text-align: end;
+            }
+
+        }
+
     }
-
-    #con-div {
-        width: 24px;
-        height: 24px;
-        margin-left: 8px;
-        align-self: center;
-
-    }
-
-    #social-media {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-    }
-
 
 }
 
-#copy-right{
-   display: flex;
-   width:987px;
-    margin-top:18px;
-    margin-bottom:18px;
-
-:first-child{
-    width: 687px;
-}
-   :last-child{
-       width: 300px;
-       text-align: end;
-   }
-
-}
